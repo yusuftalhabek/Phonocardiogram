@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <Button fx:id="StartRecording" layoutX="408.0" layoutY="368.0" mnemonicParsing="false" onAction="#ActionStartRecording" text="Start Recording" textAlignment="CENTER" />
+      <Button fx:id="SelectFile" layoutX="515.0" layoutY="368.0" mnemonicParsing="false" onAction="#ActionSelectFile" text="Select File" textAlignment="CENTER" />
+      <LineChart fx:id="Graphic" alternativeColumnFillVisible="true" createSymbols="false" prefHeight="377.0" prefWidth="600.0" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+        <xAxis>
+          <CategoryAxis label="Time (s)" prefHeight="20.0" prefWidth="524.0" tickMarkVisible="false" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis label="Heartbeat per second" lowerBound="-2.5" side="LEFT" upperBound="1.5" />
+        </yAxis>
+      </LineChart>
+   </children>
+</AnchorPane>
