@@ -8,15 +8,15 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
    <children>
-      <Button fx:id="StartRecording" layoutX="408.0" layoutY="368.0" mnemonicParsing="false" onAction="#ActionStartRecording" text="Start Recording" textAlignment="CENTER" />
-      <Button fx:id="SelectFile" layoutX="515.0" layoutY="368.0" mnemonicParsing="false" onAction="#ActionSelectFile" text="Select File" textAlignment="CENTER" />
-      <LineChart fx:id="Graphic" alternativeColumnFillVisible="true" createSymbols="false" prefHeight="377.0" prefWidth="600.0" verticalGridLinesVisible="false" verticalZeroLineVisible="false">
+      <LineChart fx:id="lineChart" prefHeight="359.0" prefWidth="500.0">
         <xAxis>
-          <CategoryAxis label="Time (s)" prefHeight="20.0" prefWidth="524.0" tickMarkVisible="false" />
+          <CategoryAxis side="BOTTOM" />
         </xAxis>
         <yAxis>
-          <NumberAxis label="Heartbeat per second" lowerBound="-2.5" side="LEFT" upperBound="1.5" />
+          <NumberAxis lowerBound="-2.5" side="LEFT" upperBound="2.0" />
         </yAxis>
       </LineChart>
+      <Button fx:id="handleRecord" layoutX="414.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleRecord" text="Record" />
+      <Button fx:id="selectFile" layoutX="481.0" layoutY="348.0" mnemonicParsing="false" onAction="#handleFileButton" text="Select File" />
    </children>
 </AnchorPane>
